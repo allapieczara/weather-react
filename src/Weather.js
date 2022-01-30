@@ -11,7 +11,7 @@ export default function Weather() {
             <form className="d-flex">
               <input
                 placeholder="Type your city in here"
-                class="form-control rounded"
+                className="form-control rounded"
                 type="search"
                 aria-label="Search"
                 id="city-search"
@@ -37,8 +37,8 @@ export default function Weather() {
                   <ReactAnimatedWeather
                     icon="CLEAR_DAY"
                     color="#ffd608"
-                    size="170"
-                    animate="true"
+                    size={170}
+                    animate={true}
                   />
                 </div>
                 <div className="col">

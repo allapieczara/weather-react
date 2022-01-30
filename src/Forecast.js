@@ -17,40 +17,40 @@ export default function Forecast() {
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
-              size="40"
-              animate="true"
+              size={40}
+              animate={true}
             />
           </div>
           <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
-              size="40"
-              animate="true"
+              size={40}
+              animate={true}
             />
           </div>
           <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
-              size="40"
-              animate="true"
+              size={40}
+              animate={true}
             />
           </div>
           <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
-              size="40"
-              animate="true"
+              size={40}
+              animate={true}
             />
           </div>
           <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
-              size="40"
-              animate="true"
+              size={40}
+              animate={true}
             />
           </div>
         </div>
