@@ -69,8 +69,9 @@ export default function Weather() {
       </div>
       <footer>
         <a
-          href="https://github.com/allapieczara/Vanilla-Weather-App"
+          href="https://github.com/allapieczara/weather-react.git"
           target="_blank"
+          rel="noreferrer"
         >
           Open-source code
         </a>{" "}
