@@ -1,13 +1,14 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import Forecast from "./Forecast";
+import "./Forecast.css";
 export default function Weather() {
   return (
     <div className="Weather">
-      <div class="app-wrapper">
-        <div class="app-body">
+      <div className="app-wrapper">
+        <div className="app-body">
           <header>
-            <form id="search-form" class="d-flex">
+            <form className="d-flex">
               <input
                 placeholder="Type your city in here"
                 class="form-control rounded"
@@ -15,11 +16,11 @@ export default function Weather() {
                 aria-label="Search"
                 id="city-search"
               />
-              <button class="btn btn-outline-primary" type="submit">
+              <button className="btn btn-outline-primary" type="submit">
                 Search
               </button>
               <button
-                class="btn btn-outline-success"
+                className="btn btn-outline-success"
                 id="current-btn"
                 type="button"
               >
@@ -28,11 +29,11 @@ export default function Weather() {
             </form>
           </header>
           <main>
-            <div class="container">
-              <h1 id="current-city">Tokyo</h1>
-              <p id="today-date">Mon 31 Jan</p>
-              <div class="row">
-                <div class="col">
+            <div className="container">
+              <h1>Tokyo</h1>
+              <p className="today-date">Mon 31 Jan</p>
+              <div className="row">
+                <div className="col">
                   <ReactAnimatedWeather
                     icon="CLEAR_DAY"
                     color="#ffd608"
@@ -40,30 +41,26 @@ export default function Weather() {
                     animate="true"
                   />
                 </div>
-                <div class="col" id="weather-info">
-                  <p class="description" id="description">
-                    Clear
-                  </p>
+                <div className="col">
+                  <p className="description">Clear</p>
 
-                  <p class="bottom-margin">
-                    Wind: <span id="wind">5</span>Km/h
+                  <p className="bottom-margin">
+                    Wind: <span>5</span>Km/h
                   </p>
                   <p>
-                    Humidity: <span id="humidity">81</span>%
+                    Humidity: <span>81</span>%
                   </p>
-                  <h3 class="display-2 fw-bolder" id="current-temp">
-                    12
-                  </h3>
-                  <div class="weather-temp">
+                  <h3 className="display-2 fw-bolder">12</h3>
+                  <div className="weather-temp">
                     <h3>
-                      <a href="#" class="active" id="celcius">
+                      <a href="#" className="celcius">
                         °C
                       </a>
                     </h3>
                   </div>
                 </div>
               </div>
-              <div class="weather-forecast" id="forecast">
+              <div className="weather-forecast">
                 <Forecast />
               </div>
             </div>

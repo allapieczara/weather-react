@@ -4,16 +4,16 @@ import ReactAnimatedWeather from "react-animated-weather";
 export default function Forecast() {
   return (
     <div className="Forecast">
-      <div class="week-days">
-        <div class="row">
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
+      <div className="week-days">
+        <div className="row temp">
+          <div className="col">16°C</div>
+          <div className="col">16°C</div>
+          <div className="col">16°C</div>
+          <div className="col">16°C</div>
+          <div className="col">16°C</div>
         </div>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
@@ -21,7 +21,7 @@ export default function Forecast() {
               animate="true"
             />
           </div>
-          <div class="col">
+          <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
@@ -29,7 +29,7 @@ export default function Forecast() {
               animate="true"
             />
           </div>
-          <div class="col">
+          <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
@@ -37,7 +37,7 @@ export default function Forecast() {
               animate="true"
             />
           </div>
-          <div class="col">
+          <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
@@ -45,7 +45,7 @@ export default function Forecast() {
               animate="true"
             />
           </div>
-          <div class="col">
+          <div className="col">
             <ReactAnimatedWeather
               icon="CLEAR_DAY"
               color="#ffd608"
@@ -54,12 +54,12 @@ export default function Forecast() {
             />
           </div>
         </div>
-        <div class="row">
-          <div class="col">Friday</div>
-          <div class="col">Saturday</div>
-          <div class="col">Sunday</div>
-          <div class="col">Monday</div>
-          <div class="col">Tuesday</div>
+        <div className="row">
+          <div className="col">Friday</div>
+          <div className="col">Saturday</div>
+          <div className="col">Sunday</div>
+          <div className="col">Monday</div>
+          <div className="col">Tuesday</div>
         </div>
       </div>
     </div>

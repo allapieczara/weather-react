@@ -90,7 +90,7 @@ footer {
   cursor: default;
 }
 
-#today-date {
+.today-date {
   margin-bottom: unset;
   font-style: italic;
   font-weight: bold;
@@ -99,9 +99,9 @@ footer {
   color: rgb(108, 117, 119);
 }
 
-#celcius {
+.celcius {
   text-decoration: none;
 }
-#fahrenheit {
+.fahrenheit {
   text-decoration: none;
 }

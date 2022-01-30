@@ -1,0 +1,9 @@
+.row {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.temp {
+  color: grey;
+  font-weight: 600;
+}
