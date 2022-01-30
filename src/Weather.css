@@ -1,0 +1,107 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(75, 85, 88);
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  display: inline;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+}
+
+.description {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  display: inline;
+  color: grey;
+  text-transform: capitalize;
+}
+
+.btn {
+  margin: 0 10px 0 10px;
+}
+.container {
+  margin-top: 30px;
+}
+
+.app-wrapper {
+  margin: 30px auto;
+  max-width: 700px;
+}
+
+.app-body {
+  padding: 20px;
+  border: 1px solid #3737ee;
+  border-radius: 40px;
+  background: #fff;
+}
+
+.weather-icon {
+  min-width: 200px;
+  display: block;
+}
+
+.bottom-margin {
+  margin-block-end: 0px;
+}
+
+.weather-forecast {
+  text-align: center;
+  margin-top: 20px;
+
+  border-radius: 10px;
+}
+
+.weather-forecast-date {
+  opacity: 0.6;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.6;
+}
+
+.weather-temp {
+  display: inline;
+}
+
+.weather-temp .active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+#today-date {
+  margin-bottom: unset;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(108, 117, 119);
+}
+
+#celcius {
+  text-decoration: none;
+}
+#fahrenheit {
+  text-decoration: none;
+}
