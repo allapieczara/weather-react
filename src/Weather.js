@@ -53,9 +53,7 @@ export default function Weather() {
                   <h3 className="display-2 fw-bolder">12</h3>
                   <div className="weather-temp">
                     <h3>
-                      <a href="#" className="celcius">
-                        °C
-                      </a>
+                      <p className="celcius">°C</p>
                     </h3>
                   </div>
                 </div>
