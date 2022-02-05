@@ -7,26 +7,23 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+.Weather h1 {
   text-align: center;
   color: rgb(75, 85, 88);
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
 }
 
-h3 {
+.Weather h3 {
   display: inline;
   font-family: "Roboto", sans-serif;
 }
 
-p {
+.Weather p {
   font-family: "Roboto", sans-serif;
 }
 
-footer {
-  font-size: 12px;
-  text-align: center;
-}
+
 
 .description {
   font-family: "Roboto", sans-serif;
