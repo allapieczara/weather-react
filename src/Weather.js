@@ -3,12 +3,13 @@ import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
 import Forecast from "./Forecast";
 import "./Forecast.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response.data.dt);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -16,7 +17,7 @@ export default function Weather(props) {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      date: "Mon 07 Feb",
+      date: new Date(response.date.dt * 1000),
       icon: (
         <ReactAnimatedWeather
           icon="CLEAR_DAY"
@@ -58,7 +59,9 @@ export default function Weather(props) {
             <main>
               <div className="container">
                 <h1>{weatherData.city}</h1>
-                <p className="today-date">{weatherData.date}</p>
+                <p className="today-date">
+                  <FormattedDate date={weatherData.date} />
+                </p>
                 <div className="row">
                   <div className="col">{weatherData.icon}</div>
                   <div className="col">
@@ -93,8 +96,8 @@ export default function Weather(props) {
     );
   } else {
     let metric = "&units=metric";
-   
-    const apiKey = "9505a4340fe19568106c1c5b7dc42321";
+
+    const apiKey = "38d62e96e6e4fcc736d1b2b751f08c2d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}${metric}`;
     axios.get(apiUrl).then(handleResponse);
 
