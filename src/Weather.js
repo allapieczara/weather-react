@@ -50,12 +50,14 @@ export default function Weather() {
                   <p>
                     Humidity: <span>81</span>%
                   </p>
-                  <h3 className="display-2 fw-bolder">12</h3>
-                  <div className="weather-temp">
-                    <h3>
-                      <p className="celcius">°C</p>
-                    </h3>
-                  </div>
+                  <span>
+                    <h3 className="display-2 fw-bolder">12</h3>
+                    <div className="weather-temp">
+                      <h3>
+                        <p className="celcius">°C</p>
+                      </h3>
+                    </div>
+                  </span>
                 </div>
               </div>
               <div className="weather-forecast">
