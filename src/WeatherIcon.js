@@ -12,7 +12,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Clouds":
       return (
         <ReactAnimatedWeather
@@ -22,7 +22,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Rain":
       return (
         <ReactAnimatedWeather
@@ -32,7 +32,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Snow":
       return (
         <ReactAnimatedWeather
@@ -42,7 +42,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Drizzle":
       return (
         <ReactAnimatedWeather
@@ -52,7 +52,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Thunderstorm":
       return (
         <ReactAnimatedWeather
@@ -62,7 +62,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     case "Mist":
       return (
         <ReactAnimatedWeather
@@ -72,7 +72,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+
     default:
       return (
         <ReactAnimatedWeather
@@ -82,7 +82,6 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-     
   }
 }
 
