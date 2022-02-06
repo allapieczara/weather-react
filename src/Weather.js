@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ReactAnimatedWeather from "react-animated-weather";
+
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 
@@ -9,6 +9,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -17,14 +18,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
-      icon: (
-        <ReactAnimatedWeather
-          icon="CLEAR_DAY"
-          color="#ffd608"
-          size={170}
-          animate={true}
-        />
-      ),
+      icon: response.data.weather[0].main,
     });
   }
 
@@ -35,6 +29,7 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
+    
   }
 
   function search() {
