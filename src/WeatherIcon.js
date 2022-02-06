@@ -73,7 +73,7 @@ export default function WeatherIcon(props) {
         />
       );
       break;
-    case "Fog":
+    default:
       return (
         <ReactAnimatedWeather
           icon="FOG"
@@ -82,7 +82,7 @@ export default function WeatherIcon(props) {
           animate={true}
         />
       );
-      break;
+     
   }
 }
 
