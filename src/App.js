@@ -14,7 +14,7 @@ function App() {
         >
           Open-source code
         </a>{" "}
-        by Alla pieczara
+        by Alla Pieczara
       </footer>
     </div>
   );

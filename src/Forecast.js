@@ -1,68 +1,48 @@
-import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
-import "./Forecast.css";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <div className="week-days">
-        <div className="row temp">
-          <div className="col">16°C</div>
-          <div className="col">16°C</div>
-          <div className="col">16°C</div>
-          <div className="col">16°C</div>
-          <div className="col">16°C</div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <ReactAnimatedWeather
-              icon="CLEAR_DAY"
-              color="#ffd608"
-              size={40}
-              animate={true}
-            />
+import "./Forecast.css";
+import WeatherForecastDaily from "./WeatherForecastDaily";
+
+
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+  
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  if (loaded) {
+    return (
+      <div className="Forecast">
+        <div className="week-days">
+          <div className="row">
+            {forecast.map(function (dailyForecast, index) {
+              if (index < 5) {
+                return (
+                  <div className="col" key={index}>
+                    <WeatherForecastDaily data={dailyForecast} />
+                  </div>
+                );
+              }
+            })}
           </div>
-          <div className="col">
-            <ReactAnimatedWeather
-              icon="CLEAR_DAY"
-              color="#ffd608"
-              size={40}
-              animate={true}
-            />
-          </div>
-          <div className="col">
-            <ReactAnimatedWeather
-              icon="CLEAR_DAY"
-              color="#ffd608"
-              size={40}
-              animate={true}
-            />
-          </div>
-          <div className="col">
-            <ReactAnimatedWeather
-              icon="CLEAR_DAY"
-              color="#ffd608"
-              size={40}
-              animate={true}
-            />
-          </div>
-          <div className="col">
-            <ReactAnimatedWeather
-              icon="CLEAR_DAY"
-              color="#ffd608"
-              size={40}
-              animate={true}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">Friday</div>
-          <div className="col">Saturday</div>
-          <div className="col">Sunday</div>
-          <div className="col">Monday</div>
-          <div className="col">Tuesday</div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = "b015cb71b14a6b0a5f7551a9ef540747";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
 }

@@ -7,3 +7,8 @@
   color: rgb(53, 52, 52);
   font-weight: 500;
 }
+
+.WeatherForecast-temperature-min {
+  opacity: 0.5;
+  margin-left: 5px;
+}
