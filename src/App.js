@@ -10,7 +10,7 @@ function App() {
         <a
           href="https://github.com/allapieczara/weather-react.git"
           target="_blank"
-          rel="noreferrer"
+          rel=" noopener noreferrer"
         >
           Open-source code
         </a>{" "}
